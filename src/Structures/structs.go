@@ -2,16 +2,17 @@ package Structures
 
 import (
 	"fmt"
+	"strconv"
 )
 
 // Define person struct
 type Person struct {
 	// Define properties of struct
-	firstName string
-	lastName string
-	city string
-	gender string
-	age int
+	firstName 	string
+	lastName 	string
+	city 		string
+	gender 		string
+	age 		int
 }
 
 func Exec() {
@@ -23,11 +24,11 @@ func Exec() {
 func structs() {
 	// Init. person using Person struct
 	person1 := Person {
-		firstName: "Patrick",
-		lastName: "Archer",
-		city: "Tempe",
+		firstName: "Tim",
+		lastName: "Mit",
+		city: "Florida",
 		gender: "M",
-		age: 22,
+		age: 102,
 	}
 	//person1 := Person {firstName: "Patrick", lastName: "Archer", city: "Tempe", gender: "M", age: 22}
 	//person1 := Person {
@@ -46,16 +47,16 @@ func structs() {
 
 // Value receiver function -- acts a lot like "this.x" functionality
 func (p Person) greeting() string {
-	return "Hello, my name is " + p.firstName + "and I am " + string(p.age)
+	return "Hello, my name is " + p.firstName + " and I am " + strconv.Itoa(p.age) + " years old."
 }
 
 func valueReceivers() {
 	person2 := Person {
-		firstName: "Patrick",
-		lastName: "Archer",
+		firstName: "Cheryl",
+		lastName: "Star",
 		city: "Tempe",
-		gender: "M",
-		age: 22,
+		gender: "F",
+		age: 45,
 	}
 	fmt.Println(person2.greeting())
 }
@@ -78,9 +79,9 @@ func (p *Person) getsMarried(newLastName string) {
 
 func pointerReceivers() {
 	person3 := Person {
-		firstName: "Patrick",
-		lastName: "Archer",
-		city: "Tempe",
+		firstName: "Joe",
+		lastName: "Shmoe",
+		city: "Phoenix",
 		gender: "M",
 		age: 22,
 	}
@@ -89,13 +90,13 @@ func pointerReceivers() {
 	fmt.Println(person3.age)
 
 	person4 := Person {
-		firstName: "Marissa",
-		lastName: "Archer",
-		city: "Flagstaff",
+		firstName: "Sam",
+		lastName: "Smith",
+		city: "Los Angeles",
 		gender: "F",
 		age: 65,
 	}
 	fmt.Println(person4)
-	person4.getsMarried("Smith")
+	person4.getsMarried("McDonald")
 	fmt.Println(person4)
 }

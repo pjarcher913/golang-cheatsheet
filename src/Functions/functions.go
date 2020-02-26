@@ -7,7 +7,7 @@ func Exec() {
 }
 
 func funcs() {
-	fmt.Println(greeting("Patrick"))
+	fmt.Println(greeting("Jerry"))
 	fmt.Println(getSum(71, 22))
 }
 

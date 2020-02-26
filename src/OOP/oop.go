@@ -6,7 +6,10 @@ import (
 )
 
 func Exec() {
-	newEmployee := emp.New("Patrick", "Archer", "parcher@comtechefdata.com", 22, 10, 3)
+	newEmployee := emp.New("Joe", "Shmoe", "joeshmoe@gmail.com", 22, 10, 3)
+
+	neObj := newEmployee.GetFullObject()
+	fmt.Println(neObj)
 
 	neFullName := newEmployee.GetName()
 	neFirstName := neFullName[0]
@@ -14,6 +17,11 @@ func Exec() {
 	fmt.Printf("First Name: %s\nLast Name: %s\n", neFirstName, neLastName)
 
 	neEmail := newEmployee.GetEmail()
+	fmt.Printf("Email: %s\n", neEmail)
+
+	newEmployee.SetEmail("newemail@outlook.com")
+
+	neEmail = newEmployee.GetEmail()
 	fmt.Printf("Email: %s\n", neEmail)
 
 	neAge := newEmployee.GetAge()

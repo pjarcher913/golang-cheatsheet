@@ -7,6 +7,7 @@ import (
 	Funcs "Functions"
 	"Interfaces"
 	j "JSON"
+	logger "Logs"
 	"Loops"
 	"Maps"
 	"OOP"
@@ -62,4 +63,6 @@ func main() {
 	OOP.Exec()
 	fmt.Print("\n=== Starting App.JSON.Exec() ===\n\n")
 	j.Exec()
+	fmt.Print("\n=== Starting App.Logger.Exec() ===\n\n")
+	logger.Exec()
 }

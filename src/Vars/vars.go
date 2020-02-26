@@ -24,9 +24,9 @@ func vars() {
 			complex64 complex128
 	*/
 	// STRING
-	var name_1 string = "Patrick_1"
-	name_2 := "Patrick_2"		// := is shorthand for declaring and initializing a var
-	name_3, name_4 := "Patrick_3", "Patrick_4"
+	var name_1 string = "Terry_1"
+	name_2 := "Terry_2"		// := is shorthand for declaring and initializing a var
+	name_3, name_4 := "Terry_3", "Terry_4"
 	fmt.Println("name_1: ", name_1,
 		"\nname_2: ", name_2,
 		"\nname_3: ", name_3,
